@@ -1,16 +1,15 @@
 #import mysql.connector
+import os
 from flask import jsonify
 from flask import redirect
 from flask import Flask
 application = Flask(__name__)
 
-#base_path = 'http://127.0.0.1:5000'
-base_path = 'http://flaskexample-env.eba-aaetkm9m.us-east-2.elasticbeanstalk.com'
-
+base_path = os.environ.get('STATIC_URL', application.static_url_path)
 
 @application.route('/')
 def root():
-    return redirect(base_path + '/static/Index.html')
+    return redirect(base_path + '/Index.html')
 
 
     
