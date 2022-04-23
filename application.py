@@ -10,7 +10,7 @@ base_path = 'http://127.0.0.1:5000'
 
 @application.route('/')
 def root():
-    return 'test'
+    return redirect(base_path + '/static/Index.html')
 
 
     
@@ -20,10 +20,13 @@ def report_padelmatch():
     
     result_pedal = []
     result_pedal.append({
-            "player": 1,
-            "points": 2
+            "player": "player 1",
+            "points": "3"
         })
-    
+    result_pedal.append({
+            "player": "player 2",
+            "points": "7"
+        })
     return jsonify({
         "pedal": result_pedal
     })
