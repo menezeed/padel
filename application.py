@@ -11,6 +11,7 @@ base_path = os.environ.get('STATIC_URL', application.static_url_path)
 
 @application.route('/')
 def root():
+    return "Oi!!"
     return redirect(base_path + '/Index.html')
 
 @application.route('/pedal', methods=['GET'])
