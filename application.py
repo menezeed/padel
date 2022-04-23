@@ -10,7 +10,7 @@ base_path = 'http://flaskexample-env.eba-aaetkm9m.us-east-2.elasticbeanstalk.com
 
 @application.route('/')
 def root():
-    return redirect(base_path + 'app/static/Index.html')
+    return redirect(base_path + '44static/Index.html')
 
 
     
