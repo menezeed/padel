@@ -6,12 +6,12 @@ application = Flask(__name__)
 
 database = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=srv_padel_uat;UID=root;PWD=London@990'
 base_path = 'http://127.0.0.1:5000'
-base_path = 'http://flaskexample-env.eba-aaetkm9m.us-east-2.elasticbeanstalk.com'
+#base_path = 'http://flaskexample-env.eba-aaetkm9m.us-east-2.elasticbeanstalk.com'
 
 
 @application.route('/')
 def root():
-    return redirect(base_path + '/static/Index.html')
+    return redirect(base_path + 'Index.html')
 
 
     
