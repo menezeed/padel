@@ -10,7 +10,7 @@ angular.module('MyApp').controller("MyControler", function($scope, $resource, $t
         }).catch(function(error){
             //empty
         }).finally(function(){
-            $timeout($scope.refresh, 30000);
+            $timeout($scope.refresh, 5000);
         });
     };
 
